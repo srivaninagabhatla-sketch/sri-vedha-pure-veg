@@ -1,0 +1,2395 @@
+<!DOCTYPE html>
+<html lang="te">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>శ్రీ వేధ ప్యూర్ వెజ్ కుకింగ్ & క్యాటరింగ్</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,"Noto Sans Telugu",sans-serif;
+}
+
+body{
+    background:#fff8e8;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:#075c3d;
+    color:white;
+    padding:15px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px #0003;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#ffb000;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.cart-btn{
+    background:#ff9d00;
+    color:white;
+    padding:10px 15px;
+    border-radius:25px;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+
+    background:
+    linear-gradient(#075c3dcc,#075c3dcc),
+    url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1400&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+}
+
+.hero h1{
+    font-size:46px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.btn{
+    border:none;
+    padding:14px 25px;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn-orange{
+    background:#ff9d00;
+    color:white;
+}
+
+.btn-green{
+    background:#075c3d;
+    color:white;
+}
+
+/* COMMON */
+
+section{
+    padding:50px 6%;
+}
+
+.section-title{
+    text-align:center;
+    color:#075c3d;
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+.subtitle{
+    text-align:center;
+    margin-top:-20px;
+    margin-bottom:30px;
+    color:#777;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 4px 15px #0001;
+}
+
+.feature-icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.feature h3{
+    color:#075c3d;
+    margin-bottom:8px;
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:650px;
+    margin:0 auto 25px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px 20px;
+    border:2px solid #ddd;
+    border-radius:30px;
+    outline:none;
+    font-size:16px;
+}
+
+/* CATEGORIES */
+
+.categories{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.category{
+    border:2px solid #075c3d;
+    background:white;
+    color:#075c3d;
+    padding:10px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.category.active,
+.category:hover{
+    background:#075c3d;
+    color:white;
+}
+
+/* MENU */
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.food-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 18px #0002;
+    transition:.3s;
+}
+
+.food-card:hover{
+    transform:translateY(-5px);
+}
+
+.food-img{
+    height:180px;
+    width:100%;
+    object-fit:cover;
+}
+
+.food-content{
+    padding:18px;
+}
+
+.food-content h3{
+    color:#075c3d;
+    margin-bottom:8px;
+}
+
+.food-content p{
+    color:#777;
+    font-size:14px;
+    min-height:40px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    color:#e68a00;
+    margin:12px 0;
+}
+
+.add-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#075c3d;
+    color:white;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* OFFER */
+
+.offer{
+    background:#075c3d;
+    color:white;
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+}
+
+.offer h2{
+    color:#ffb000;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+/* CATERING */
+
+.catering{
+    background:white;
+}
+
+.catering-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.catering-card{
+    padding:30px;
+    background:#fff8e8;
+    border-radius:20px;
+    text-align:center;
+    border-left:6px solid #ffb000;
+}
+
+.catering-card .icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+/* FORM */
+
+.form-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 5px 20px #0002;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+.form-group textarea{
+    min-height:90px;
+}
+
+/* REVIEWS */
+
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.review{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 4px 15px #0001;
+}
+
+.stars{
+    color:#ffae00;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#063d2a;
+    color:white;
+    padding:40px 6%;
+    text-align:center;
+}
+
+.footer-links{
+    margin:20px 0;
+}
+
+.footer-links a{
+    color:white;
+    margin:0 10px;
+    text-decoration:none;
+}
+
+/* CART */
+
+.cart-panel{
+    position:fixed;
+    right:-450px;
+    top:0;
+    width:420px;
+    max-width:95%;
+    height:100%;
+    background:white;
+    z-index:2000;
+    box-shadow:-5px 0 20px #0003;
+    transition:.3s;
+    padding:25px;
+    overflow-y:auto;
+}
+
+.cart-panel.open{
+    right:0;
+}
+
+.cart-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.close{
+    border:none;
+    background:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+    gap:10px;
+}
+
+.qty{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.qty button{
+    width:28px;
+    height:28px;
+    border:none;
+    border-radius:50%;
+    background:#075c3d;
+    color:white;
+    cursor:pointer;
+}
+
+.cart-total{
+    font-size:22px;
+    font-weight:bold;
+    margin:20px 0;
+    color:#075c3d;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:#0008;
+    z-index:3000;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-content{
+    background:#fff;
+    width:700px;
+    max-width:100%;
+    max-height:90vh;
+    overflow-y:auto;
+    border-radius:25px;
+    padding:30px;
+    position:relative;
+}
+
+.modal-close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:30px;
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+/* ORDER TRACKING */
+
+.tracking{
+    display:flex;
+    justify-content:space-between;
+    margin:30px 0;
+    position:relative;
+}
+
+.track-step{
+    text-align:center;
+    z-index:2;
+    background:white;
+    padding:5px;
+}
+
+.track-icon{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#ddd;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+}
+
+.track-step.active .track-icon{
+    background:#075c3d;
+    color:white;
+}
+
+.tracking::before{
+    content:"";
+    height:4px;
+    background:#ddd;
+    position:absolute;
+    left:10%;
+    right:10%;
+    top:27px;
+    z-index:1;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#20c45a;
+    color:white;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:27px;
+    z-index:1500;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header{
+        padding:12px 4%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+    .section-title{
+        font-size:27px;
+    }
+
+    .cart-panel{
+        width:95%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+🍲 శ్రీ వేధ <span>ప్యూర్ వెజ్</span>
+</div>
+
+<nav>
+
+<a href="#home">హోమ్</a>
+
+<a href="#menu">మెనూ</a>
+
+<a href="#catering">క్యాటరింగ్</a>
+
+<a href="#booking">బుకింగ్</a>
+
+<a href="#contact">కాంటాక్ట్</a>
+
+</nav>
+
+<button class="cart-btn" onclick="openCart()">
+🛒 Cart <span id="cartCount">0</span>
+</button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>
+ఇంటి రుచులు... మీ ఇంటికే ❤️
+</h1>
+
+<p>
+🌿 100% Pure Vegetarian • Traditional Andhra Food
+</p>
+
+<p>
+🍳 Breakfast &nbsp; | &nbsp; 🍚 Lunch &nbsp; | &nbsp; 🎉 Catering
+</p>
+
+<br>
+
+<div class="hero-buttons">
+
+<button
+class="btn btn-orange"
+onclick="document.getElementById('menu').scrollIntoView()">
+
+🍱 ఈరోజు మెనూ చూడండి
+
+</button>
+
+<button
+class="btn btn-green"
+onclick="document.getElementById('booking').scrollIntoView()">
+
+🎉 క్యాటరింగ్ బుక్ చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section>
+
+<h2 class="section-title">
+మా ప్రత్యేకతలు
+</h2>
+
+<div class="features">
+
+<div class="feature">
+
+<div class="feature-icon">🌿</div>
+
+<h3>100% Pure Veg</h3>
+
+<p>
+పూర్తిగా శాకాహార వంటకాలు మాత్రమే
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">👩‍🍳</div>
+
+<h3>Home Cooking</h3>
+
+<p>
+ఇంటి రుచితో శుభ్రమైన వంటకాలు
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">🥗</div>
+
+<h3>Fresh Ingredients</h3>
+
+<p>
+తాజా పదార్థాలతో ప్రతిరోజూ తయారీ
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">🚚</div>
+
+<h3>Home Delivery</h3>
+
+<p>
+మీ ఇంటి అడ్రస్‌కు delivery
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= DAILY MENU ================= -->
+
+<section id="menu">
+
+<h2 class="section-title">
+🍱 ఈరోజు మెనూ
+</h2>
+
+<p class="subtitle">
+ప్రతిరోజూ తాజా Pure Vegetarian Breakfast & Lunch
+</p>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Idly, Meals, Pulihora... వెతకండి"
+onkeyup="searchFood()">
+
+</div>
+
+
+<div class="categories">
+
+<button
+class="category active"
+onclick="filterFood('all',this)">
+All
+</button>
+
+<button
+class="category"
+onclick="filterFood('breakfast',this)">
+🍳 Breakfast
+</button>
+
+<button
+class="category"
+onclick="filterFood('lunch',this)">
+🍚 Lunch
+</button>
+
+<button
+class="category"
+onclick="filterFood('snacks',this)">
+🥟 Snacks
+</button>
+
+<button
+class="category"
+onclick="filterFood('sweets',this)">
+🍬 Sweets
+</button>
+
+</div>
+
+
+<div class="menu-grid" id="foodGrid">
+
+
+<!-- IDLY -->
+
+<div
+class="food-card"
+data-category="breakfast"
+data-name="idly sambar">
+
+<img
+class="food-img"
+src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80">
+
+<div class="food-content">
+
+<h3>🍳 Idly & Sambar</h3>
+
+<p>
+మెత్తటి ఇడ్లీ, వేడి సాంబార్ మరియు చట్నీ
+</p>
+
+<div class="price">
+₹70
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Idly & Sambar',70)">
+
+➕ Cart లో Add చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- DOSA -->
+
+<div
+class="food-card"
+data-category="breakfast"
+data-name="dosa">
+
+<img
+class="food-img"
+src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=80">
+
+<div class="food-content">
+
+<h3>🥞 Masala Dosa</h3>
+
+<p>
+Crispy dosa with potato masala & chutney
+</p>
+
+<div class="price">
+₹90
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Masala Dosa',90)">
+
+➕ Cart లో Add చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PONGAL -->
+
+<div
+class="food-card"
+data-category="breakfast"
+data-name="pongal">
+
+<img
+class="food-img"
+src="https://images.unsplash.com/photo-1626509653291-18d8f9e6b0e5?auto=format&fit=crop&w=600&q=80">
+
+<div class="food-content">
+
+<h3>🍲 Ven Pongal</h3>
+
+<p>
+Traditional South Indian breakfast
+</p>
+
+<div class="price">
+₹80
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Ven Pongal',80)">
+
+➕ Cart లో Add చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- POORI -->
+
+<div
+class="food-card"
+data-category="breakfast"
+data-name="poori">
+
+<img
+class="food-img"
+src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=600&q=80">
+
+<div class="food-content">
+
+<h3>🥘 Poori & Potato Curry</h3>
+
+<p>
+Hot crispy poori with potato curry
+</p>
+
+<div class="price">
+₹90
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Poori & Potato Curry',90)">
+
+➕ Cart లో Add చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ANDHRA MEALS -->
+
+<div
+class="food-card"
+data-category="lunch"
+data-name="andhra meals">
+
+<img
+class="food-img"
+src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80">
+
+<div class="food-content">
+
+<h3>🍚 Andhra Full Meals</h3>
+
+<p>
+అన్నం, పప్పు, కూర, సాంబార్,
+రసం, పెరుగు & స్వీట్
+</p>
+
+<div class="price">
+₹180
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Andhra Full Meals',180)">
+
+➕ Cart లో Add చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- VEG BIRYANI -->
+
+<div
+class="food-card"
+data-category="lunch"
+data-name="veg biryani">
+
+<img
+class="food-img"
+src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=600&q=80">
+
+<div class="food-content">
+
+<h3>🍛 Veg Biryani</h3>
+
+<p>
+Aromatic rice with vegetables and spices
+</p>
+
+<div class="price">
+₹160
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Veg Biryani',160)">
+
+➕ Cart లో Add చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- SAMBAR RICE -->
+
+<div
+class="food-card"
+data-category="lunch"
+data-name="sambar rice">
+
+<img
+class="food-img"
+src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=600&q=80">
+
+<div class="food-content">
+
+<h3>🍚 Sambar Rice</h3>
+
+<p>
+Hot rice with traditional vegetable sambar
+</p>
+
+<div class="price">
+₹120
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Sambar Rice',120)">
+
+➕ Cart లో Add చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PULIHORA -->
+
+<div
+class="food-card"
+data-category="lunch"
+data-name="pulihora">
+
+<img
+class="food-img"
+src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=600&q=80">
+
+<div class="food-content">
+
+<h3>🍋 Pulihora</h3>
+
+<p>
+Traditional Andhra style lemon rice
+</p>
+
+<div class="price">
+₹100
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Pulihora',100)">
+
+➕ Cart లో Add చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- GARELU -->
+
+<div
+class="food-card"
+data-category="snacks"
+data-name="garelu">
+
+<img
+class="food-img"
+src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80">
+
+<div class="food-content">
+
+<h3>🥯 Garelu</h3>
+
+<p>
+Crispy traditional Andhra snack
+</p>
+
+<div class="price">
+₹80
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Garelu',80)">
+
+➕ Cart లో Add చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- LADDU -->
+
+<div
+class="food-card"
+data-category="sweets"
+data-name="boondi laddu">
+
+<img
+class="food-img"
+src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=600&q=80">
+
+<div class="food-content">
+
+<h3>🍬 Boondi Laddu</h3>
+
+<p>
+Traditional homemade sweet
+</p>
+
+<div class="price">
+₹120
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Boondi Laddu',120)">
+
+➕ Cart లో Add చేయండి
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= OFFER ================= -->
+
+<section>
+
+<div class="offer">
+
+<h2>
+🎁 Today's Special Offer
+</h2>
+
+<p>
+₹500 పైగా order చేస్తే
+<strong>FREE DELIVERY</strong>
+</p>
+
+<br>
+
+<button
+class="btn btn-orange"
+onclick="document.getElementById('menu').scrollIntoView()">
+
+Order Now
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================= CATERING ================= -->
+
+<section
+class="catering"
+id="catering">
+
+<h2 class="section-title">
+🎉 Pure Veg Catering Services
+</h2>
+
+<p class="subtitle">
+పెళ్లిళ్లు, పూజలు, ఫంక్షన్స్ కోసం పూర్తి Vegetarian Catering
+</p>
+
+
+<div class="catering-grid">
+
+
+<div class="catering-card">
+
+<div class="icon">💍</div>
+
+<h3>Wedding Catering</h3>
+
+<p>
+పెళ్లిళ్లు మరియు రిసెప్షన్స్ కోసం
+Traditional Pure Veg Food
+</p>
+
+</div>
+
+
+<div class="catering-card">
+
+<div class="icon">🎂</div>
+
+<h3>Birthday Functions</h3>
+
+<p>
+Birthday parties కోసం
+Pure Veg food arrangements
+</p>
+
+</div>
+
+
+<div class="catering-card">
+
+<div class="icon">🛕</div>
+
+<h3>Temple & Pooja</h3>
+
+<p>
+పూజలు, వ్రతాలు మరియు
+సంప్రదాయ కార్యక్రమాలకు
+సాత్విక శాకాహార భోజనం
+</p>
+
+</div>
+
+
+<div class="catering-card">
+
+<div class="icon">🏠</div>
+
+<h3>House Functions</h3>
+
+<p>
+House warming మరియు
+family functions కోసం catering
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section id="booking">
+
+<h2 class="section-title">
+📋 Catering Booking
+</h2>
+
+<p class="subtitle">
+మీ Function details ఇవ్వండి
+</p>
+
+
+<div class="form-box">
+
+<form onsubmit="submitBooking(event)">
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label>మీ పేరు</label>
+
+<input
+type="text"
+id="bookingName"
+placeholder="Enter your name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Mobile Number</label>
+
+<input
+type="tel"
+id="bookingPhone"
+placeholder="9876543210"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Function Type</label>
+
+<select id="functionType">
+
+<option>Wedding</option>
+
+<option>Reception</option>
+
+<option>Birthday</option>
+
+<option>House Warming</option>
+
+<option>Temple / Pooja</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Number of Guests</label>
+
+<input
+type="number"
+id="guests"
+placeholder="Example: 100"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Function Date</label>
+
+<input
+type="date"
+id="functionDate"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Food Service</label>
+
+<select id="foodService">
+
+<option>Breakfast</option>
+
+<option>Lunch</option>
+
+<option>Breakfast + Lunch</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>Function Address</label>
+
+<textarea
+id="functionAddress"
+placeholder="Complete function address"
+required></textarea>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>Special Requirements</label>
+
+<textarea
+id="requirements"
+placeholder="Example: Sweet counter, live dosa counter, special dishes..."></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+class="btn btn-orange"
+type="submit">
+
+🎉 Booking Request పంపండి
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section>
+
+<h2 class="section-title">
+⭐ మా Customers ఏమంటున్నారు?
+</h2>
+
+
+<div class="reviews">
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"చాలా మంచి ఇంటి రుచి.
+Pure Veg food చాలా fresh గా ఉంది."
+</p>
+
+<br>
+
+<b>— Lakshmi</b>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Wedding catering చాలా neat గా చేశారు.
+Food అందరికీ చాలా నచ్చింది."
+</p>
+
+<br>
+
+<b>— Ravi</b>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Traditional Andhra taste చాలా బాగుంది."
+</p>
+
+<br>
+
+<b>— Sravani</b>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h2 class="section-title">
+📞 సంప్రదించండి
+</h2>
+
+
+<div class="form-box">
+
+<h2>
+శ్రీ వేధ ప్యూర్ వెజ్ కుకింగ్ & క్యాటరింగ్
+</h2>
+
+<br>
+
+<p>
+🌿 100% Pure Vegetarian
+</p>
+
+<br>
+
+<p>
+🍳 Breakfast & 🍚 Lunch
+</p>
+
+<br>
+
+<p>
+📞 <b>+91 95715 55789</b>
+</p>
+
+<br>
+
+<p>
+📍 మురమళ్ల, ఆంధ్రప్రదేశ్
+</p>
+
+<br>
+
+
+<button
+class="btn btn-orange"
+onclick="callNow()">
+
+📞 Call Now
+
+</button>
+
+
+<button
+class="btn btn-green"
+onclick="whatsappMessage()">
+
+💬 WhatsApp
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>
+🍲 శ్రీ వేధ ప్యూర్ వెజ్ కుకింగ్ & క్యాటరింగ్
+</h2>
+
+<br>
+
+<p>
+🌿 PURE VEG • TRADITIONAL TASTE • HAPPY PEOPLE
+</p>
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+
+<a href="#menu">Menu</a>
+
+<a href="#catering">Catering</a>
+
+<a href="#booking">Booking</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+<p>
+© 2026 Sri Vedha Pure Veg Cooking & Catering
+</p>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/919571555789?text=Hello%20Sri%20Vedha%20Pure%20Veg%20Cooking%20and%20Catering"
+target="_blank">
+
+💬
+
+</a>
+
+
+<!-- ================= CART ================= -->
+
+<div
+class="cart-panel"
+id="cartPanel">
+
+
+<div class="cart-header">
+
+<h2>
+🛒 Your Cart
+</h2>
+
+<button
+class="close"
+onclick="closeCart()">
+
+×
+
+</button>
+
+</div>
+
+
+<div id="cartItems"></div>
+
+
+<div class="cart-total">
+
+Total: ₹<span id="cartTotal">0</span>
+
+</div>
+
+
+<button
+class="btn btn-orange"
+style="width:100%"
+onclick="openCheckout()">
+
+Proceed to Checkout →
+
+</button>
+
+</div>
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<div
+class="modal"
+id="checkoutModal">
+
+
+<div class="modal-content">
+
+<button
+class="modal-close"
+onclick="closeCheckout()">
+
+×
+
+</button>
+
+
+<h2 class="section-title">
+📦 Delivery Details
+</h2>
+
+
+<form onsubmit="placeOrder(event)">
+
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="customerName"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Mobile Number</label>
+
+<input
+type="tel"
+id="customerPhone"
+required>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>Delivery Address</label>
+
+<textarea
+id="deliveryAddress"
+placeholder="House No, Street, Area, City, Pincode"
+required></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Delivery Date</label>
+
+<input
+type="date"
+id="deliveryDate"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Delivery Time</label>
+
+<select id="deliveryTime">
+
+<option>
+Breakfast - 8 AM to 10 AM
+</option>
+
+<option>
+Lunch - 12 PM to 2 PM
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>Payment Method</label>
+
+<select id="payment">
+
+<option>
+Cash on Delivery
+</option>
+
+<option>
+UPI
+</option>
+
+<option>
+Card
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<h3>
+Order Total:
+₹<span id="checkoutTotal">0</span>
+</h3>
+
+<br>
+
+
+<button
+class="btn btn-orange"
+type="submit">
+
+✅ Place Order
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<!-- ================= ORDER SUCCESS ================= -->
+
+<div
+class="modal"
+id="orderModal">
+
+
+<div class="modal-content">
+
+<button
+class="modal-close"
+onclick="closeOrder()">
+
+×
+
+</button>
+
+
+<h2 style="text-align:center;color:#075c3d;">
+
+🎉 Order Placed Successfully!
+
+</h2>
+
+<br>
+
+<p style="text-align:center;">
+
+Thank you for ordering
+Pure Veg food from us.
+
+</p>
+
+
+<div class="tracking">
+
+
+<div class="track-step active">
+
+<div class="track-icon">
+✓
+</div>
+
+<small>
+Ordered
+</small>
+
+</div>
+
+
+<div class="track-step active">
+
+<div class="track-icon">
+👩‍🍳
+</div>
+
+<small>
+Preparing
+</small>
+
+</div>
+
+
+<div class="track-step">
+
+<div class="track-icon">
+🚚
+</div>
+
+<small>
+Out for Delivery
+</small>
+
+</div>
+
+
+<div class="track-step">
+
+<div class="track-icon">
+🏠
+</div>
+
+<small>
+Delivered
+</small>
+
+</div>
+
+</div>
+
+
+<p style="text-align:center;">
+
+<strong>
+Order ID:
+</strong>
+
+<span id="orderId"></span>
+
+</p>
+
+<br>
+
+
+<button
+class="btn btn-green"
+style="width:100%"
+onclick="whatsappOrder()">
+
+💬 WhatsApp Order Details
+
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* ================= CART ================= */
+
+let cart =
+JSON.parse(localStorage.getItem("cart")) || [];
+
+
+function saveCart(){
+
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
+updateCart();
+
+}
+
+
+function addToCart(name,price){
+
+let existing =
+cart.find(item=>item.name===name);
+
+
+if(existing){
+
+existing.qty++;
+
+}
+
+else{
+
+cart.push({
+name:name,
+price:price,
+qty:1
+});
+
+}
+
+
+saveCart();
+
+alert(
+name + " Cart లో add అయింది 🛒"
+);
+
+}
+
+
+function updateCart(){
+
+let container =
+document.getElementById("cartItems");
+
+container.innerHTML="";
+
+let total=0;
+
+let count=0;
+
+
+if(cart.length===0){
+
+container.innerHTML=
+"<p style='text-align:center;padding:30px'>Your cart is empty 😔</p>";
+
+}
+
+
+cart.forEach((item,index)=>{
+
+total += item.price * item.qty;
+
+count += item.qty;
+
+
+container.innerHTML += `
+
+<div class="cart-item">
+
+<div>
+
+<b>${item.name}</b>
+
+<br>
+
+₹${item.price}
+
+</div>
+
+
+<div class="qty">
+
+<button onclick="changeQty(${index},-1)">
+−
+</button>
+
+<span>
+${item.qty}
+</span>
+
+<button onclick="changeQty(${index},1)">
++
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+
+document.getElementById("cartTotal").innerText =
+total;
+
+
+document.getElementById("cartCount").innerText =
+count;
+
+
+document.getElementById("checkoutTotal").innerText =
+total;
+
+}
+
+
+function changeQty(index,value){
+
+cart[index].qty += value;
+
+
+if(cart[index].qty<=0){
+
+cart.splice(index,1);
+
+}
+
+
+saveCart();
+
+}
+
+
+function openCart(){
+
+document
+.getElementById("cartPanel")
+.classList.add("open");
+
+}
+
+
+function closeCart(){
+
+document
+.getElementById("cartPanel")
+.classList.remove("open");
+
+}
+
+
+/* ================= CHECKOUT ================= */
+
+function openCheckout(){
+
+if(cart.length===0){
+
+alert(
+"ముందుగా food items Cart లో add చేయండి."
+);
+
+return;
+
+}
+
+
+closeCart();
+
+document
+.getElementById("checkoutModal")
+.classList.add("show");
+
+}
+
+
+function closeCheckout(){
+
+document
+.getElementById("checkoutModal")
+.classList.remove("show");
+
+}
+
+
+function placeOrder(event){
+
+event.preventDefault();
+
+
+let orderNumber =
+"SV" +
+Math.floor(
+100000 +
+Math.random()*900000
+);
+
+
+localStorage.setItem(
+"lastOrder",
+JSON.stringify({
+
+id:orderNumber,
+
+name:
+document.getElementById("customerName").value,
+
+phone:
+document.getElementById("customerPhone").value,
+
+address:
+document.getElementById("deliveryAddress").value,
+
+total:
+document.getElementById("checkoutTotal").innerText
+
+})
+);
+
+
+document.getElementById("orderId").innerText =
+orderNumber;
+
+
+closeCheckout();
+
+
+document
+.getElementById("orderModal")
+.classList.add("show");
+
+
+cart=[];
+
+saveCart();
+
+}
+
+
+function closeOrder(){
+
+document
+.getElementById("orderModal")
+.classList.remove("show");
+
+}
+
+
+/* ================= SEARCH ================= */
+
+function searchFood(){
+
+let search =
+document
+.getElementById("search")
+.value
+.toLowerCase();
+
+
+document
+.querySelectorAll(".food-card")
+.forEach(card=>{
+
+let name =
+card.dataset.name.toLowerCase();
+
+
+if(name.includes(search)){
+
+card.style.display="block";
+
+}
+
+else{
+
+card.style.display="none";
+
+}
+
+});
+
+}
+
+
+/* ================= FILTER ================= */
+
+function filterFood(category,button){
+
+document
+.querySelectorAll(".category")
+.forEach(btn=>{
+
+btn.classList.remove("active");
+
+});
+
+
+button.classList.add("active");
+
+
+document
+.querySelectorAll(".food-card")
+.forEach(card=>{
+
+if(
+category==="all" ||
+card.dataset.category===category
+){
+
+card.style.display="block";
+
+}
+
+else{
+
+card.style.display="none";
+
+}
+
+});
+
+}
+
+
+/* ================= CATERING ================= */
+
+function submitBooking(event){
+
+event.preventDefault();
+
+
+let name =
+document.getElementById("bookingName").value;
+
+let phone =
+document.getElementById("bookingPhone").value;
+
+let type =
+document.getElementById("functionType").value;
+
+let guests =
+document.getElementById("guests").value;
+
+let date =
+document.getElementById("functionDate").value;
+
+let service =
+document.getElementById("foodService").value;
+
+let address =
+document.getElementById("functionAddress").value;
+
+
+let message =
+`Hello Sri Vedha Pure Veg Cooking & Catering,
+
+I want to book Catering.
+
+Name: ${name}
+Phone: ${phone}
+Function: ${type}
+Guests: ${guests}
+Date: ${date}
+Food Service: ${service}
+Address: ${address}`;
+
+
+let url =
+"https://wa.me/919571555789?text="
++
+encodeURIComponent(message);
+
+
+window.open(url,"_blank");
+
+}
+
+
+/* ================= CONTACT ================= */
+
+function callNow(){
+
+window.location.href =
+"tel:+919571555789";
+
+}
+
+
+function whatsappMessage(){
+
+let message =
+"Hello Sri Vedha Pure Veg Cooking & Catering, I want to enquire about food and catering.";
+
+
+window.open(
+"https://wa.me/919571555789?text="
++
+encodeURIComponent(message),
+"_blank"
+);
+
+}
+
+
+/* ================= ORDER WHATSAPP ================= */
+
+function whatsappOrder(){
+
+let order =
+JSON.parse(
+localStorage.getItem("lastOrder")
+);
+
+
+if(!order) return;
+
+
+let message =
+`Order Confirmation
+
+Order ID: ${order.id}
+
+Name: ${order.name}
+
+Phone: ${order.phone}
+
+Address: ${order.address}
+
+Total: ₹${order.total}
+
+Pure Vegetarian Order`;
+
+
+window.open(
+"https://wa.me/919571555789?text="
++
+encodeURIComponent(message),
+"_blank"
+);
+
+}
+
+
+/* INITIAL */
+
+updateCart();
+
+</script>
+
+</body>
+</html>
